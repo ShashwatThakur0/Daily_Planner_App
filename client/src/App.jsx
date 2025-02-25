@@ -33,49 +33,47 @@ const App = () => {
 
 	return (
 		<Iphone15ProDemo>
-			<main>
-				<div className="container">
-					<h1 className="title">To-Do App</h1>
+			<div className="content-area">
+				<h1 className="title">To-Do App</h1>
 
-					<div className="input_holder">
-						<input
-							value={input}
-							onChange={(e) => setInput(e.target.value)}
-							type="text"
-							placeholder="Add a ToDo..."
-						/>
-						<button onClick={saveToDo}>Add</button>
-					</div>
-
-					<div className="date_picker">
-						<input
-							type="date"
-							value={date}
-							onChange={(e) => setDate(e.target.value)}
-						/>
-					</div>
-
-					<div className="list">
-						{toDos.map((el) => (
-							<ToDo
-								key={el._id}
-								text={el.toDo}
-								id={el._id}
-								setUpdateUI={setUpdateUI}
-								setShowPopup={setShowPopup}
-								setPopupContent={setPopupContent}
-							/>
-						))}
-					</div>
-				</div>
-				{showPopup && (
-					<Popup
-						setShowPopup={setShowPopup}
-						popupContent={popupContent}
-						setUpdateUI={setUpdateUI}
+				<div className="input_holder">
+					<input
+						value={input}
+						onChange={(e) => setInput(e.target.value)}
+						type="text"
+						placeholder="Add a ToDo..."
 					/>
-				)}
-			</main>
+					<button onClick={saveToDo}>Add</button>
+				</div>
+
+				<div className="date_picker">
+					<input
+						type="date"
+						value={date}
+						onChange={(e) => setDate(e.target.value)}
+					/>
+				</div>
+
+				<div className="list">
+					{toDos.map((el) => (
+						<ToDo
+							key={el._id}
+							text={el.toDo}
+							id={el._id}
+							setUpdateUI={setUpdateUI}
+							setShowPopup={setShowPopup}
+							setPopupContent={setPopupContent}
+						/>
+					))}
+				</div>
+			</div>
+			{showPopup && (
+				<Popup
+					setShowPopup={setShowPopup}
+					popupContent={popupContent}
+					setUpdateUI={setUpdateUI}
+				/>
+			)}
 		</Iphone15ProDemo>
 	);
 };
