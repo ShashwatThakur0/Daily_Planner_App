@@ -2,6 +2,9 @@
 
 This is a full-stack to-do application built with Vite React for the frontend and Node.js with MongoDB for the backend. The app features a modern iPhone-style interface with glass morphism effects and smooth animations.
 
+## App Interface
+![Todo App Interface](assets/images/todo-app-screenshot.png)
+
 ## Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
