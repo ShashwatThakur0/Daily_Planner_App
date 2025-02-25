@@ -35,7 +35,7 @@ const App = () => {
 		<Iphone15ProDemo>
 			<main>
 				<div className="container">
-					<h1 className="title" data-text="TODO APP">TODO APP</h1>
+					<h1 className="title">To-Do App</h1>
 
 					<div className="input_holder">
 						<input
